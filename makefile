@@ -46,4 +46,4 @@ builders/openwrt-imagebuilder-$(RELEASE)-mvebu-cortexa9.Linux-x86_64/bootstrap: 
 dl/openwrt-imagebuilder-$(RELEASE)-mvebu-cortexa9.Linux-x86_64.tar.xz:
 	mkdir -p dl
 	wget -O dl/openwrt-imagebuilder-$(RELEASE)-mvebu-cortexa9.Linux-x86_64.tar.xz \
-	 https://downloads.openwrt.org/releases/19.07.6/targets/mvebu/cortexa9/openwrt-imagebuilder-19.07.6-mvebu-cortexa9.Linux-x86_64.tar.xz
+	 https://downloads.openwrt.org/releases/$(RELEASE)/targets/mvebu/cortexa9/openwrt-imagebuilder-$(RELEASE)-mvebu-cortexa9.Linux-x86_64.tar.xz
