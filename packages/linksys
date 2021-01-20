@@ -1,6 +1,10 @@
 base-files
 busybox
+ca-bundle
 cgi-io
+curl
+ddns-scripts
+ddns-scripts_cloudflare.com-v4
 dnsmasq
 dropbear
 firewall
@@ -45,6 +49,7 @@ kmod-udptunnel6
 kmod-wireguard
 libblobmsg-json
 libc
+libcurl4
 libgcc1
 libip4tc2
 libip6tc2
@@ -55,6 +60,7 @@ libjson-script
 liblua5.1.5
 liblucihttp-lua
 liblucihttp0
+libmbedtls12
 libmnl0
 libncurses6
 libnl-tiny
@@ -69,6 +75,7 @@ logd
 lua
 luci
 luci-app-advanced-reboot
+luci-app-ddns
 luci-app-firewall
 luci-app-nlbwmon
 luci-app-opkg
@@ -76,6 +83,7 @@ luci-app-wireguard
 luci-base
 luci-compat
 luci-lib-ip
+luci-lib-ipkg
 luci-lib-jsonc
 luci-lib-nixio
 luci-mod-admin-full
