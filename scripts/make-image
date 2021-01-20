@@ -1,14 +1,12 @@
 #!/bin/bash
 
 ROOT=/home/jostein/build/openwrt
-RELEASE=19.07.6
-NAME=$1
-ARCH=$2
-DEVICE=$3
-XPACKAGE=$4
+RELEASE=$1
+NAME=$2
+ARCH=$3
+DEVICE=$4
+XPACKAGE=$5
 
-# openwrt-imagebuilder-19.07.6-ath79-generic.Linux-x86_64
-# openwrt-imagebuilder-19.07.6-mvebu-cortexa9.Linux-x86_64
 BUILDER=$ROOT/builders/openwrt-imagebuilder-$RELEASE-$ARCH.Linux-x86_64
 TARGET=$ROOT/images
 mkdir -p $TARGET
