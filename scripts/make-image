@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROOT=/home/jostein/build/openwrt
+ROOT=`dirname "$0"`/..
 RELEASE=$1
 NAME=$2
 ARCH=$3
