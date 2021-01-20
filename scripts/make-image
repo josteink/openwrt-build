@@ -1,0 +1,39 @@
+#!/bin/bash
+
+ROOT=/home/jostein/build/openwrt
+RELEASE=19.07.6
+NAME=$1
+ARCH=$2
+DEVICE=$3
+XPACKAGE=$4
+
+# openwrt-imagebuilder-19.07.6-ath79-generic.Linux-x86_64
+# openwrt-imagebuilder-19.07.6-mvebu-cortexa9.Linux-x86_64
+BUILDER=$ROOT/builders/openwrt-imagebuilder-$RELEASE-$ARCH.Linux-x86_64
+TARGET=$ROOT/images
+mkdir -p $TARGET
+
+# cat $ROOT/packages/$NAME
+PACKAGES="$(cat $ROOT/packages/$NAME | tr '\n' ' ' )"
+echo $PACKAGES
+
+echo Enterting $BUILDER
+pushd $BUILDER
+
+# make clean
+
+#echo Building image for $NAME with following packages:
+#echo =================================================
+#echo make manifest PROFILE="$DEVICE" PACKAGES="$PACKAGES"
+#make manifest PROFILE="$DEVICE" PACKAGES="$PACKAGES $XPACKAGE"
+
+echo =================================================
+echo Building image for $NAME
+echo =================================================
+
+echo Build starting...
+echo make image PROFILE="$DEVICE" PACKAGES="$PACKAGES $XPACKAGE" BIN_DIR="$TARGET" EXTRA_IMAGE_NAME="-$NAME-"
+make image PROFILE="$DEVICE" PACKAGES="$PACKAGES $XPACKAGE" BIN_DIR="$TARGET" EXTRA_IMAGE_NAME="-$NAME-"
+
+popd
+
