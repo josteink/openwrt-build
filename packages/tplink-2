@@ -9,6 +9,7 @@ fstools
 fwtool
 getrandom
 hostapd-common
+htop
 ip6tables
 iptables
 iw
@@ -100,6 +101,7 @@ rpcd-mod-file
 rpcd-mod-iwinfo
 rpcd-mod-luci
 rpcd-mod-rrdns
+screen
 swconfig
 terminfo
 uboot-envtools
