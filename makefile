@@ -20,7 +20,10 @@ tplink-2: builders
 tplink-shed: builders
 	scripts/make-image $(RELEASE) tplink-shed ath79-generic tplink_archer-c7-v2 -wpad-basic
 
-all: builders linksys tplink-u tplink-1 tplink-2 tplink-shed
+buffalo: builders
+	scripts/make-image $(RELEASE) buffalo ar71xx-generic WZRHPG300NH -wpad-basic
+
+all: linksys tplink-u tplink-1 tplink-2 tplink-shed buffalo
 
 builders: builders/openwrt-imagebuilder-$(RELEASE)-ath79-generic.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASE)-mvebu-cortexa9.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASE)-ar71xx-generic.Linux-x86_64/bootstrap
 
