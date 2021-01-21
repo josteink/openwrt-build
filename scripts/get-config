@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ROOT="`dirname $(readlink -f $0)`/.."
+NAME=$1
+
+mkdir -p $ROOT/configs/$NAME
+rm -rf $ROOT/configs/$NAME
+mkdir -p $ROOT/configs/$NAME
+
+scp -r root@$NAME:/etc/* $ROOT/configs/$NAME
+
