@@ -97,6 +97,7 @@ luci-proto-wireguard
 luci-theme-bootstrap
 mtd
 mwlwifi-firmware-88w8864
+nano
 netifd
 nlbwmon
 odhcp6c
