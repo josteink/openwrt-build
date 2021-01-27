@@ -32,3 +32,22 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build images
         run: make
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: openwrt-images
+          path: ./images/
+      - uses: dev-drprasad/delete-tag-and-release@v0.1.2
+        with:
+         delete_release: true
+         tag_name: unstable
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: unstable
+          title: openwrt ${{ env.VERSION }}
+          prerelease: true
+          files: |
+            images/*
