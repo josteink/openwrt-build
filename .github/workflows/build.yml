@@ -50,4 +50,6 @@ jobs:
           title: openwrt ${{ env.VERSION }}
           prerelease: true
           files: |
-            images/*
+            images/sha*
+            images/*squashfs*
+            
