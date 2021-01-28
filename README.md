@@ -26,3 +26,10 @@ make
 
 Edit `makefile` and update the `RELEASE` variable to match latest
 OpenWRT release.
+
+Optionally you can provide a release-name inline as a make varibale
+to create a single build for a specific release.
+
+````sh
+make RELEASE=19.07.1
+````
