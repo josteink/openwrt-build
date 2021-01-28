@@ -126,7 +126,6 @@ uhttpd
 urandom-seed
 urngd
 usign
-wireguard
 wireguard-tools
 wireless-regdb
 wpad-basic
