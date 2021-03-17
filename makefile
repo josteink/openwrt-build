@@ -6,7 +6,7 @@ clean:
 	rm -rf images builders dl
 
 linksys: builders
-	scripts/make-image $(RELEASE) linksys mvebu-cortexa9 linksys_wrt1900acs
+	scripts/make-image $(RELEASE) linksys mvebu-cortexa9 linksys_wrt1900acs -wireguard
 
 tplink-u: builders
 	scripts/make-image $(RELEASE) tplink-u ath79-generic tplink_archer-c7-v2 -wpad-basic
