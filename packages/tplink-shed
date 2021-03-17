@@ -1,6 +1,7 @@
 ath10k-firmware-qca988x-ct
 base-files
 busybox
+ca-bundle
 cgi-io
 dnsmasq
 dropbear
@@ -62,7 +63,10 @@ liblucihttp-lua
 liblucihttp0
 libncurses6
 libnl-tiny
+libopenssl1.1
+libpcre
 libpthread
+librt
 libubox20191228
 libubus-lua
 libubus20191227
@@ -115,5 +119,7 @@ uhttpd
 urandom-seed
 urngd
 usign
+wget
 wireless-regdb
 wpad
+zlib
