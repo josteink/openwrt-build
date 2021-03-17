@@ -1,4 +1,4 @@
-RELEASE=19.07.6
+RELEASE=19.07.7
 
 default: all
 
