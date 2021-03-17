@@ -5,6 +5,7 @@ cgi-io
 curl
 ddns-scripts
 ddns-scripts_cloudflare.com-v4
+diffutils
 dnsmasq
 dropbear
 firewall
@@ -65,7 +66,10 @@ libmbedtls12
 libmnl0
 libncurses6
 libnl-tiny
+libopenssl1.1
+libpcre
 libpthread
+librt
 libubox20191228
 libubus-lua
 libubus20191227
@@ -126,6 +130,8 @@ uhttpd
 urandom-seed
 urngd
 usign
+wget
+wireguard
 wireguard-tools
 wireless-regdb
 wpad-basic
