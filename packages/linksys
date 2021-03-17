@@ -78,7 +78,6 @@ libuclient20160123
 libxtables12
 logd
 lua
-luci
 luci-app-advanced-reboot
 luci-app-ddns
 luci-app-firewall
