@@ -31,7 +31,7 @@ echo =================================================
 
 echo Build starting...
 echo make image PROFILE="$DEVICE" PACKAGES="$PACKAGES $XPACKAGE" BIN_DIR="$TARGET" EXTRA_IMAGE_NAME="-$NAME-"
-make image PROFILE="$DEVICE" PACKAGES="$PACKAGES $XPACKAGE" BIN_DIR="$TARGET" EXTRA_IMAGE_NAME="-$NAME-"
+make image PROFILE="$DEVICE" PACKAGES="$PACKAGES $XPACKAGE" BIN_DIR="$TARGET" EXTRA_IMAGE_NAME="-$NAME-" FILES="$ROOT/files/*"
 
 popd
 
