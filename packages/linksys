@@ -72,12 +72,13 @@ libpthread
 librt
 libubox20191228
 libubus-lua
-libubus20191227
+libubus20210603
 libuci20130104
 libuclient20160123
 libxtables12
 logd
 lua
+luci
 luci-app-advanced-reboot
 luci-app-ddns
 luci-app-firewall
