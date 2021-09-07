@@ -56,8 +56,8 @@ libgcc1
 libip4tc2
 libip6tc2
 libiwinfo-lua
-libiwinfo20181126
-libjson-c2
+libiwinfo20210430
+libjson-c5
 libjson-script
 liblua5.1.5
 liblucihttp-lua
@@ -68,11 +68,11 @@ libopenssl1.1
 libpcre
 libpthread
 librt
-libubox20191228
+libubox20210516
 libubus-lua
-libubus20210603
+libubus20210630
 libuci20130104
-libuclient20160123
+libuclient20201210
 libxtables12
 logd
 lua

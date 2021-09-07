@@ -9,16 +9,16 @@ linksys: builders
 	scripts/make-image $(RELEASE) linksys mvebu-cortexa9 linksys_wrt1900acs -wireguard
 
 tplink-u: builders
-	scripts/make-image $(RELEASE) tplink-u ath79-generic tplink_archer-c7-v2 -wpad-basic
+	scripts/make-image $(RELEASE) tplink-u ath79-generic tplink_archer-c7-v2 -wpad-basic-wolfssl
 
 tplink-1: builders
-	scripts/make-image $(RELEASE) tplink-1 ath79-generic tplink_archer-c7-v2 -wpad-basic
+	scripts/make-image $(RELEASE) tplink-1 ath79-generic tplink_archer-c7-v2 -wpad-basic-wolfssl
 
 tplink-2: builders
-	scripts/make-image $(RELEASE) tplink-2 ath79-generic tplink_archer-c7-v4 -wpad-basic
+	scripts/make-image $(RELEASE) tplink-2 ath79-generic tplink_archer-c7-v4 -wpad-basic-wolfssl
 
 tplink-shed: builders
-	scripts/make-image $(RELEASE) tplink-shed ath79-generic tplink_archer-c7-v2 -wpad-basic
+	scripts/make-image $(RELEASE) tplink-shed ath79-generic tplink_archer-c7-v2 -wpad-basic-wolfssl
 
 all: linksys tplink-u tplink-1 tplink-2 tplink-shed
 
