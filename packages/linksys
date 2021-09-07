@@ -4,7 +4,7 @@ ca-bundle
 cgi-io
 curl
 ddns-scripts
-ddns-scripts_cloudflare.com-v4
+ddns-scripts-cloudflare
 diffutils
 dnsmasq
 dropbear
@@ -134,5 +134,5 @@ wget
 wireguard
 wireguard-tools
 wireless-regdb
-wpad-basic
+wpad-basic-wolfssl
 zlib
