@@ -6,6 +6,7 @@ cgi-io
 dnsmasq
 dropbear
 firewall
+fping
 fstools
 fwtool
 getrandom
