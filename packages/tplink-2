@@ -121,5 +121,5 @@ urngd
 usign
 wget
 wireless-regdb
-wpad
+wpad-wolfssl
 zlib
