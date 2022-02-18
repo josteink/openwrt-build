@@ -100,6 +100,7 @@ libwolfssl4.8.1.66253b90
 libxtables12
 logd
 lua
+luasocket
 luci
 luci-app-advanced-reboot
 luci-app-ddns
@@ -137,6 +138,10 @@ pciutils
 ppp
 ppp-mod-pppoe
 procd
+prometheus-node-exporter-lua
+prometheus-node-exporter-lua-nat_traffic
+prometheus-node-exporter-lua-netstat
+prometheus-node-exporter-lua-openwrt
 qrencode
 rpcd
 rpcd-mod-file

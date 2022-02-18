@@ -64,6 +64,7 @@ libuclient
 libxtables
 logd
 lua
+luasocket
 luci
 luci-app-firewall
 luci-base
@@ -84,7 +85,12 @@ opkg
 ppp
 ppp-mod-pppoe
 procd
+prometheus-node-exporter-lua
+px5g-wolfssl
 rpcd
+rpcd-mod-file
+rpcd-mod-iwinfo
+rpcd-mod-luci
 rpcd-mod-rrdns
 screen
 swconfig
@@ -96,5 +102,9 @@ ubusd
 uci
 uclient-fetch
 uhttpd
+uhttpd-mod-ubus
+urandom-seed
+urngd
 usign
 wireless-regdb
+wpad-basic-wolfssl

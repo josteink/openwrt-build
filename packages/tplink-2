@@ -81,9 +81,12 @@ libubus-lua
 libubus20210630
 libuci20130104
 libuclient20201210
+libustream-wolfssl20201210
+libwolfssl4.8.1.66253b90
 libxtables12
 logd
 lua
+luasocket
 luci
 luci-app-dawn
 luci-app-firewall
@@ -112,6 +115,7 @@ opkg
 ppp
 ppp-mod-pppoe
 procd
+prometheus-node-exporter-lua
 rpcd
 rpcd-mod-file
 rpcd-mod-iwinfo
