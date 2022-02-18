@@ -5,7 +5,6 @@ busybox
 ca-bundle
 cgi-io
 curl
-dawn
 ddns-scripts
 ddns-scripts-cloudflare
 ddns-scripts-services
@@ -70,8 +69,6 @@ libc
 libcurl4
 libevdev
 libgcc1
-libgcrypt
-libgpg-error
 libip4tc2
 libip6tc2
 libiwinfo-data
@@ -105,7 +102,6 @@ logd
 lua
 luci
 luci-app-advanced-reboot
-luci-app-dawn
 luci-app-ddns
 luci-app-firewall
 luci-app-nlbwmon
@@ -116,7 +112,6 @@ luci-compat
 luci-lib-base
 luci-lib-ip
 luci-lib-ipkg
-luci-lib-json
 luci-lib-jsonc
 luci-lib-nixio
 luci-mod-admin-full
@@ -160,7 +155,6 @@ uclibcxx
 uclient-fetch
 uhttpd
 uhttpd-mod-ubus
-umdns
 urandom-seed
 urngd
 usbids
