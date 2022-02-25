@@ -95,8 +95,8 @@ libuci20130104
 libuclient20201210
 libudev-zero
 libusb-1.0-0
-libustream-wolfssl20201210
-libwolfssl4.8.1.66253b90
+libustream-wolfssl
+libwolfssl
 libxtables12
 logd
 lua
