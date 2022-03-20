@@ -23,7 +23,10 @@ tplink-shed: builders
 buffalo: builders
 	scripts/make-image $(RELEASE) buffalo ath79-generic buffalo_wzr-hp-g300nh-s -wpad-basic
 
-all: linksys tplink-u tplink-1 tplink-2 tplink-shed buffalo
+netgear: builders
+	scripts/make-image $(RELEASE) netgear ipq40xx-generic netgear_ex6150v2
+
+all: linksys tplink-u tplink-1 tplink-2 tplink-shed buffalo netgear
 
 builders: builders/openwrt-imagebuilder-$(RELEASE)-ath79-generic.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASE)-mvebu-cortexa9.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASE)-ipq40xx-generic.Linux-x86_64
 

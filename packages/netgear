@@ -1,0 +1,8 @@
+htop
+screen
+nano
+luasocket
+prometheus-node-exporter-lua
+prometheus-node-exporter-lua-nat_traffic
+prometheus-node-exporter-lua-netstat
+prometheus-node-exporter-lua-openwrt
