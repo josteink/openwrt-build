@@ -69,8 +69,8 @@ libubus-lua
 libubus20210630
 libuci20130104
 libuclient20201210
-libustream-wolfssl20201210
-libwolfssl5.1.1.99a5b54a
+libustream-wolfssl
+libwolfssl
 libxtables12
 logd
 lua
