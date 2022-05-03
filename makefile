@@ -61,4 +61,4 @@ builders/openwrt-imagebuilder-$(RELEASE)-ipq40xx-generic.Linux-x86_64: dl/openwr
 
 dl/openwrt-imagebuilder-$(RELEASE)-ipq40xx-generic.Linux-x86_64.tar.xz:
 	mkdir -p dl
-	wget -O $@ https://downloads.openwrt.org/releases/$(RELEASE)/targets/ipq40xx/generic/openwrt-imagebuilder-21.02.2-ipq40xx-generic.Linux-x86_64.tar.xz
+	wget -O $@ https://downloads.openwrt.org/releases/$(RELEASE)/targets/ipq40xx/generic/openwrt-imagebuilder-$(RELEASE)-ipq40xx-generic.Linux-x86_64.tar.xz
