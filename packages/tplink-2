@@ -8,17 +8,14 @@ dawn
 dnsmasq
 dropbear
 ethtool
-firewall
 fping
 fstools
 fwtool
 getrandom
 hostapd-common
 htop
-ip6tables
 iperf
-iptables
-iw
+iw-full
 iwinfo
 jshn
 jsonfilter
@@ -76,9 +73,9 @@ libopenssl1.1
 libpcre
 libpthread
 librt
-libubox20210516
+libubox
 libubus-lua
-libubus20210630
+libubus
 libuci20130104
 libuclient20201210
 libustream-wolfssl
@@ -104,6 +101,7 @@ luci-mod-status
 luci-mod-system
 luci-proto-ipv6
 luci-proto-ppp
+luci-proto-relay
 luci-theme-bootstrap
 mtd
 nano
@@ -116,6 +114,7 @@ ppp
 ppp-mod-pppoe
 procd
 prometheus-node-exporter-lua
+relayd
 rpcd
 rpcd-mod-file
 rpcd-mod-iwinfo
@@ -129,7 +128,6 @@ ubox
 ubus
 ubusd
 uci
-uclibcxx
 uclient-fetch
 uhttpd
 uhttpd-mod-ubus

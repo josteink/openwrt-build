@@ -8,17 +8,15 @@ dawn
 dnsmasq
 dropbear
 ethtool
-firewall
 fping
 fstools
 fwtool
 getrandom
 hostapd-common
 htop
-ip6tables
 iperf
-iptables
 iw-full
+iwinfo
 jshn
 jsonfilter
 kernel
@@ -29,7 +27,6 @@ kmod-ath9k-common
 kmod-cfg80211
 kmod-gpio-button-hotplug
 kmod-hwmon-core
-kmod-ip6tables
 kmod-ipt-conntrack
 kmod-ipt-core
 kmod-ipt-nat
@@ -75,9 +72,9 @@ libopenssl1.1
 libpcre
 libpthread
 librt
-libubox20210516
+libubox
 libubus-lua
-libubus20210630
+libubus
 libuci20130104
 libuclient20201210
 libustream-wolfssl
@@ -130,7 +127,6 @@ ubox
 ubus
 ubusd
 uci
-uclibcxx
 uclient-fetch
 uhttpd
 uhttpd-mod-ubus

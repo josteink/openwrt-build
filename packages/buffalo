@@ -2,14 +2,11 @@ base-files
 busybox
 dnsmasq
 dropbear
-firewall
 fstools
 fwtool
 hostapd-common
 htop
-ip6tables
-iptables
-iw
+iw-full
 iwinfo
 jshn
 jsonfilter
@@ -19,7 +16,6 @@ kmod-ath9k
 kmod-ath9k-common
 kmod-cfg80211
 kmod-gpio-button-hotplug
-kmod-ip6tables
 kmod-ipt-conntrack
 kmod-ipt-core
 kmod-ipt-nat
