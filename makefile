@@ -1,4 +1,4 @@
-RELEASE=22.03.0
+RELEASE=22.03.2
 
 default: all
 
