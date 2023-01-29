@@ -33,3 +33,10 @@ to create a single build for a specific release.
 ````sh
 make RELEASE=19.07.1
 ````
+
+To make a snapshot-build, a more involved command-line is required:
+
+````sh
+make RELEASE=snapshot RELEASEDASH= RELEASEFOLDER=snapshots
+````
+

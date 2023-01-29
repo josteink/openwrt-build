@@ -1,13 +1,12 @@
 #!/bin/bash
 
 ROOT="`dirname $(readlink -f $0)`/.."
-RELEASE=$1
+RELEASEDASHARCH=$1
 NAME=$2
-ARCH=$3
-DEVICE=$4
-XPACKAGE=$5
+DEVICE=$3
+XPACKAGE=$4
 
-BUILDER=$ROOT/builders/openwrt-imagebuilder-$RELEASE-$ARCH.Linux-x86_64
+BUILDER=$ROOT/builders/openwrt-imagebuilder-${RELEASEDASHARCH}.Linux-x86_64
 TARGET=$ROOT/images
 mkdir -p $TARGET
 
