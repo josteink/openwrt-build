@@ -26,7 +26,7 @@ buffalo: builders
 	scripts/make-image $(RELEASEDASH)ath79-generic buffalo buffalo_wzr-hp-g300nh-s -wpad-basic
 
 netgear: builders
-	scripts/make-image $(RELEASEDASH)netgear ipq40xx-generic netgear_ex6150v2
+	scripts/make-image $(RELEASEDASH)ipq40xx-generic netgear netgear_ex6150v2
 
 all: linksys tplink-u tplink-1 tplink-2 tplink-shed buffalo netgear
 
