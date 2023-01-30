@@ -23,7 +23,7 @@ tplink-shed: builders
 	scripts/make-image $(RELEASEDASH)ath79-generic tplink-shed tplink_archer-c7-v2 -wpad-basic-wolfssl
 
 buffalo: builders
-	scripts/make-image $(RELEASEDASH)buffalo ath79-generic buffalo_wzr-hp-g300nh-s -wpad-basic
+	scripts/make-image $(RELEASEDASH)ath79-generic buffalo buffalo_wzr-hp-g300nh-s -wpad-basic
 
 netgear: builders
 	scripts/make-image $(RELEASEDASH)netgear ipq40xx-generic netgear_ex6150v2
