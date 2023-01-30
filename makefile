@@ -50,7 +50,7 @@ builders/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64/bootstra
 	tar x -C builders -vf $?
 	touch $@
 
-dl/openwrt-imagebuilder-$(RELEASEDSAH)mvebu-cortexa9.Linux-x86_64.tar.xz:
+dl/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64.tar.xz:
 	mkdir -p dl
 	wget -O $@ https://downloads.openwrt.org/$(RELEASEFOLDER)/targets/mvebu/cortexa9/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64.tar.xz
 
