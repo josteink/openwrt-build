@@ -99,7 +99,7 @@ libiptext0
 libiptext6-0
 libiwinfo-data
 libiwinfo-lua
-libiwinfo20210430
+libiwinfo
 libjson-c5
 libjson-script
 libkmod
@@ -111,7 +111,7 @@ libmnl0
 libncurses6
 libnftnl11
 libnghttp2-14
-libnl-tiny1
+libnl
 libopenssl1.1
 libpci
 libpthread
