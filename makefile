@@ -1,4 +1,4 @@
-RELEASE=22.03.3
+RELEASE=22.03.4
 RELEASEFOLDER=releases/$(RELEASE)
 RELEASEDASH=$(RELEASE)-
 
@@ -14,10 +14,10 @@ tplink-u: builders
 	scripts/make-image $(RELEASEDASH)ath79-generic tplink-u tplink_archer-c7-v2 -wpad-basic-wolfssl
 
 tplink-1: builders
-	scripts/make-image $(RELEASEDASH)ath79-generic tplink-1 tplink_archer-c7-v2 -wpad-basic-wolfssl
+	scripts/make-image $(RELEASEDASH)ath79-generic tplink-1 tplink_archer-c7-v4 -wpad-basic-wolfssl
 
 tplink-2: builders
-	scripts/make-image $(RELEASEDASH)ath79-generic tplink-2 tplink_archer-c7-v4 -wpad-basic-wolfssl
+	scripts/make-image $(RELEASEDASH)ath79-generic tplink-2 tplink_archer-c7-v2 -wpad-basic-wolfssl
 
 tplink-shed: builders
 	scripts/make-image $(RELEASEDASH)ath79-generic tplink-shed tplink_archer-c7-v2 -wpad-basic-wolfssl
