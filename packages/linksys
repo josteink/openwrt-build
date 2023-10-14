@@ -112,7 +112,7 @@ libncurses6
 libnftnl11
 libnghttp2-14
 libnl
-libopenssl1.1
+libopenssl
 libpci
 libpthread
 libqrencode
@@ -127,9 +127,9 @@ libuclient20201210
 libucode20220812
 libudev-zero
 libusb-1.0-0
-libustream-wolfssl
+libustream-mbedtls
 libuuid1
-libwolfssl
+libmbedtls
 libxtables12
 logd
 lua
@@ -209,6 +209,6 @@ usbutils
 usign
 wireguard-tools
 wireless-regdb
-wpad-basic-wolfssl
+wpad-basic-mbedtls
 xtables-nft
 zlib

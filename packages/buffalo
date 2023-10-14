@@ -82,7 +82,7 @@ ppp
 ppp-mod-pppoe
 procd
 prometheus-node-exporter-lua
-px5g-wolfssl
+px5g-mbedtls
 rpcd
 rpcd-mod-file
 rpcd-mod-iwinfo
@@ -103,4 +103,4 @@ urandom-seed
 urngd
 usign
 wireless-regdb
-wpad-basic-wolfssl
+wpad-basic-mbedtls

@@ -1,4 +1,4 @@
-RELEASE=22.03.5
+RELEASE=23.05.0
 RELEASEFOLDER=releases/$(RELEASE)
 RELEASEDASH=$(RELEASE)-
 
@@ -11,16 +11,16 @@ linksys: builders
 	scripts/make-image $(RELEASEDASH)mvebu-cortexa9 linksys linksys_wrt1900acs -wireguard
 
 tplink-u: builders
-	scripts/make-image $(RELEASEDASH)ath79-generic tplink-u tplink_archer-c7-v2 -wpad-basic-wolfssl
+	scripts/make-image $(RELEASEDASH)ath79-generic tplink-u tplink_archer-c7-v2 -wpad-basic-mbedtls
 
 tplink-1: builders
-	scripts/make-image $(RELEASEDASH)ath79-generic tplink-1 tplink_archer-c7-v4 -wpad-basic-wolfssl
+	scripts/make-image $(RELEASEDASH)ath79-generic tplink-1 tplink_archer-c7-v4 -wpad-basic-mbedtls
 
 tplink-2: builders
-	scripts/make-image $(RELEASEDASH)ath79-generic tplink-2 tplink_archer-c7-v2 -wpad-basic-wolfssl
+	scripts/make-image $(RELEASEDASH)ath79-generic tplink-2 tplink_archer-c7-v2 -wpad-basic-mbedtls
 
 tplink-shed: builders
-	scripts/make-image $(RELEASEDASH)ath79-generic tplink-shed tplink_archer-c7-v2 -wpad-basic-wolfssl
+	scripts/make-image $(RELEASEDASH)ath79-generic tplink-shed tplink_archer-c7-v2 -wpad-basic-mbedtls
 
 buffalo: builders
 	scripts/make-image $(RELEASEDASH)ath79-generic buffalo buffalo_wzr-hp-g300nh-s -wpad-basic
@@ -30,7 +30,7 @@ netgear: builders
 
 all: linksys tplink-u tplink-1 tplink-2 tplink-shed buffalo netgear
 
-builders: builders/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64
+builders: builders/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64/bootstrap
 
 # ath79
 
@@ -56,7 +56,7 @@ dl/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64.tar.xz:
 
 # netgear ex6150v2 - ipq40xx
 
-builders/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64: dl/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64.tar.xz
+builders/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64/bootstrap: dl/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64.tar.xz
 	mkdir -p builders
 	tar x -C builders -vf $?
 	touch $@

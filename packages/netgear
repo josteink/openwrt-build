@@ -53,7 +53,7 @@ libip4tc2
 libip6tc2
 libiwinfo-data
 libiwinfo-lua
-libiwinfo20210430
+libiwinfo
 libjson-c5
 libjson-script
 liblua5.1.5
@@ -67,8 +67,8 @@ libubus-lua
 libubus
 libuci20130104
 libuclient20201210
-libustream-wolfssl
-libwolfssl
+libustream-mbedtls
+libmbedtls
 libxtables12
 logd
 lua
@@ -122,4 +122,4 @@ urandom-seed
 urngd
 usign
 wireless-regdb
-wpad-basic-wolfssl
+wpad-basic-mbedtls

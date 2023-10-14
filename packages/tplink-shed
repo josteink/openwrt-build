@@ -60,7 +60,7 @@ libip4tc2
 libip6tc2
 libiwinfo-data
 libiwinfo-lua
-libiwinfo20210430
+libiwinfo
 libjson-c5
 libjson-script
 liblua5.1.5
@@ -68,7 +68,7 @@ liblucihttp-lua
 liblucihttp0
 libncurses6
 libnl-tiny
-libopenssl1.1
+libopenssl
 libpcre
 libpthread
 librt
@@ -77,8 +77,8 @@ libubus-lua
 libubus
 libuci20130104
 libuclient20201210
-libustream-wolfssl
-libwolfssl
+libustream-mbedtls
+libmbedtls
 libxtables12
 logd
 lua
@@ -136,5 +136,5 @@ urngd
 usign
 wget
 wireless-regdb
-wpad-wolfssl
+wpad-mbedtls
 zlib
