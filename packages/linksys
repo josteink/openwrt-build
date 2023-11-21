@@ -124,7 +124,7 @@ libubus
 libuci-lua
 libuci20130104
 libuclient20201210
-libucode20220812
+libucode
 libudev-zero
 libusb-1.0-0
 libustream-mbedtls
