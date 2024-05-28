@@ -29,7 +29,7 @@ netgear: builders
 	scripts/make-image $(RELEASEDASH)ipq40xx-generic netgear netgear_ex6150v2
 
 zyxel: builders
-	scripts/make-image $(RELEASEDASH)ramips-mt7621 zyxel zyxel_nwa50ax
+	scripts/make-image $(RELEASEDASH)ramips-mt7621 zyxel zyxel_nwa50ax -wpad-basic-mbedtls
 
 all: linksys tplink-u tplink-1 tplink-2 tplink-shed buffalo netgear zyxel
 
