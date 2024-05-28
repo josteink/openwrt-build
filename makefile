@@ -30,7 +30,7 @@ netgear: builders
 
 all: linksys tplink-u tplink-1 tplink-2 tplink-shed buffalo netgear
 
-builders: builders/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64/bootstrap
+builders: builders/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64/bootstrap
 
 # ath79
 
@@ -64,3 +64,14 @@ builders/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64/bootstr
 dl/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64.tar.xz:
 	mkdir -p dl
 	wget -O $@ https://downloads.openwrt.org/$(RELEASEFOLDER)/targets/ipq40xx/generic/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64.tar.xz
+
+# zyxel NWA50AX
+
+builders/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64/bootstrap: dl/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64.tar.xz
+	mkdir -p builders
+	tar x -C builders -vf $?
+	touch $@
+
+dl/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64.tar.xz:
+	mkdir -p dl
+	wget -O $@ https://downloads.openwrt.org/$(RELEASEFOLDER)/targets/ramips/mt7621/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64.tar.xz
