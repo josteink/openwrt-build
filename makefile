@@ -10,18 +10,6 @@ clean:
 linksys: builders
 	scripts/make-image $(RELEASEDASH)mvebu-cortexa9 linksys linksys_wrt1900acs -wireguard
 
-tplink-u: builders
-	scripts/make-image $(RELEASEDASH)ath79-generic tplink-u tplink_archer-c7-v2 -wpad-basic-mbedtls
-
-tplink-1: builders
-	scripts/make-image $(RELEASEDASH)ath79-generic tplink-1 tplink_archer-c7-v4 -wpad-basic-mbedtls
-
-tplink-2: builders
-	scripts/make-image $(RELEASEDASH)ath79-generic tplink-2 tplink_archer-c7-v2 -wpad-basic-mbedtls
-
-tplink-shed: builders
-	scripts/make-image $(RELEASEDASH)ath79-generic tplink-shed tplink_archer-c7-v2 -wpad-basic-mbedtls
-
 buffalo: builders
 	scripts/make-image $(RELEASEDASH)ath79-generic buffalo buffalo_wzr-hp-g300nh-s -wpad-basic
 
