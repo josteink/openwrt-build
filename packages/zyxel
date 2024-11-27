@@ -2,7 +2,6 @@ base-files
 busybox
 ca-bundle
 cgi-io
-dawn
 dnsmasq
 dropbear
 firewall4
@@ -95,7 +94,6 @@ logd
 lua
 luasocket
 luci
-luci-app-dawn
 luci-app-firewall
 luci-app-opkg
 luci-base
