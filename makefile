@@ -12,6 +12,11 @@ linksys: linksys-builder
 
 linksys-builder: builders/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64/bootstrap
 
+bananapi: bananapi-builder
+	scripts/make-image $(RELEASEDASH)mediatek-filogic bananapi bananapi_bpi-r4
+
+bananapi-builder: builders/openwrt-imagebuilder-${RELEASEDASH}mediatek-filogic.Linux-x86_64/bootstrap
+
 zyxel: zyxel-builder
 	scripts/make-image $(RELEASEDASH)ramips-mt7621 zyxel zyxel_nwa50ax -wpad-basic-mbedtls
 
@@ -29,7 +34,7 @@ buffalo-builder: builders/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux
 
 all: linksys zyxel netgear buffalo
 
-builders: linksys-builder zyxel-builder netgear-builder buffalo-builder 
+builders: linksys-builder bananapi-builder zyxel-builder netgear-builder buffalo-builder 
 
 # ath79
 
@@ -74,3 +79,14 @@ builders/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64/bootstrap
 dl/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64.tar.zst:
 	mkdir -p dl
 	wget -O $@ https://downloads.openwrt.org/$(RELEASEFOLDER)/targets/ramips/mt7621/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64.tar.zst
+
+# bananapi r4
+
+builders/openwrt-imagebuilder-${RELEASEDASH}mediatek-filogic.Linux-x86_64/bootstrap: dl/openwrt-imagebuilder-${RELEASEDASH}mediatek-filogic.Linux-x86_64.tar.zst
+	mkdir -p builders
+	tar x -C builders -vf $?
+	touch $@
+
+dl/openwrt-imagebuilder-${RELEASEDASH}mediatek-filogic.Linux-x86_64.tar.zst:
+	mkdir -p dl
+	wget -O $@ https://downloads.openwrt.org/${RELEASEFOLDER}/targets/mediatek/filogic/openwrt-imagebuilder-${RELEASEDASH}mediatek-filogic.Linux-x86_64.tar.zst
