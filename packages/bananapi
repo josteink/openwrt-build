@@ -18,6 +18,7 @@ luci-app-lldpd
 luci-app-nlbwmon
 luci-proto-wireguard
 luci-ssl
+msmtp
 nano
 nlbwmon
 pciutils
