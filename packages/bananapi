@@ -10,6 +10,8 @@ i2c-tools
 i2csfp
 iperf
 iw-full
+kmod-usb-net-ipheth
+libimobiledevice
 luci
 luci-app-ddns
 luci-app-lldpd
@@ -25,5 +27,6 @@ prometheus-node-exporter-lua-netstat
 prometheus-node-exporter-lua-openwrt
 screen
 tmux
+usbmuxd
 usbutils
 wireguard-tools
