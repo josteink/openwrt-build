@@ -7,21 +7,29 @@ default: all
 clean:
 	rm -rf images builders dl
 
-linksys: builders
+linksys: linksys-builder
 	scripts/make-image $(RELEASEDASH)mvebu-cortexa9 linksys linksys_wrt1900acs -wireguard
 
-buffalo: builders
-	scripts/make-image $(RELEASEDASH)ath79-generic buffalo buffalo_wzr-hp-g300nh-s -wpad-basic
+linksys-builder: builders/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64/bootstrap
 
-netgear: builders
-	scripts/make-image $(RELEASEDASH)ipq40xx-generic netgear netgear_ex6150v2
-
-zyxel: builders
+zyxel: zyxel-builder
 	scripts/make-image $(RELEASEDASH)ramips-mt7621 zyxel zyxel_nwa50ax -wpad-basic-mbedtls
 
-all: linksys buffalo netgear zyxel
+zyxel-builder: builders/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64/bootstrap
 
-builders: builders/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64/bootstrap builders/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64/bootstrap
+netgear: netgear-builder
+	scripts/make-image $(RELEASEDASH)ipq40xx-generic netgear netgear_ex6150v2
+
+netgear-builder: builders/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64/bootstrap
+
+buffalo: buffalo-builder
+	scripts/make-image $(RELEASEDASH)ath79-generic buffalo buffalo_wzr-hp-g300nh-s -wpad-basic
+
+buffalo-builder: builders/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64/bootstrap
+
+all: linksys zyxel netgear buffalo
+
+builders: linksys-builder zyxel-builder netgear-builder buffalo-builder 
 
 # ath79
 
