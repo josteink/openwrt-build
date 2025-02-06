@@ -6,6 +6,8 @@ ddns-scripts-services
 ethtool
 fping
 htop
+i2c-tools
+i2csfp
 iperf
 iw-full
 luci
