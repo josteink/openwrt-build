@@ -1,4 +1,4 @@
-RELEASE=23.05.5
+RELEASE=24.10.0
 RELEASEFOLDER=releases/$(RELEASE)
 RELEASEDASH=$(RELEASE)-
 
@@ -25,44 +25,44 @@ builders: builders/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64
 
 # ath79
 
-builders/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64/bootstrap: dl/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64.tar.xz
+builders/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64/bootstrap: dl/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64.tar.zst
 	mkdir -p builders
 	tar x -C builders -vf $?
 	touch $@
 
-dl/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64.tar.xz:
+dl/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64.tar.zst:
 	mkdir -p dl
-	wget -O $@ https://downloads.openwrt.org/$(RELEASEFOLDER)/targets/ath79/generic/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64.tar.xz
+	wget -O $@ https://downloads.openwrt.org/$(RELEASEFOLDER)/targets/ath79/generic/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64.tar.zst
 
 # linksys - mvebu
 
-builders/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64/bootstrap: dl/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64.tar.xz
+builders/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64/bootstrap: dl/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64.tar.zst
 	mkdir -p builders
 	tar x -C builders -vf $?
 	touch $@
 
-dl/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64.tar.xz:
+dl/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64.tar.zst:
 	mkdir -p dl
-	wget -O $@ https://downloads.openwrt.org/$(RELEASEFOLDER)/targets/mvebu/cortexa9/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64.tar.xz
+	wget -O $@ https://downloads.openwrt.org/$(RELEASEFOLDER)/targets/mvebu/cortexa9/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64.tar.zst
 
 # netgear ex6150v2 - ipq40xx
 
-builders/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64/bootstrap: dl/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64.tar.xz
+builders/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64/bootstrap: dl/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64.tar.zst
 	mkdir -p builders
 	tar x -C builders -vf $?
 	touch $@
 
-dl/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64.tar.xz:
+dl/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64.tar.zst:
 	mkdir -p dl
-	wget -O $@ https://downloads.openwrt.org/$(RELEASEFOLDER)/targets/ipq40xx/generic/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64.tar.xz
+	wget -O $@ https://downloads.openwrt.org/$(RELEASEFOLDER)/targets/ipq40xx/generic/openwrt-imagebuilder-$(RELEASEDASH)ipq40xx-generic.Linux-x86_64.tar.zst
 
 # zyxel NWA50AX
 
-builders/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64/bootstrap: dl/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64.tar.xz
+builders/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64/bootstrap: dl/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64.tar.zst
 	mkdir -p builders
 	tar x -C builders -vf $?
 	touch $@
 
-dl/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64.tar.xz:
+dl/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64.tar.zst:
 	mkdir -p dl
-	wget -O $@ https://downloads.openwrt.org/$(RELEASEFOLDER)/targets/ramips/mt7621/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64.tar.xz
+	wget -O $@ https://downloads.openwrt.org/$(RELEASEFOLDER)/targets/ramips/mt7621/openwrt-imagebuilder-$(RELEASEDASH)ramips-mt7621.Linux-x86_64.tar.zst
