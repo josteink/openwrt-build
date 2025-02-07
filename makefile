@@ -32,7 +32,7 @@ buffalo: buffalo-builder
 
 buffalo-builder: builders/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64/bootstrap
 
-all: linksys zyxel netgear buffalo
+all: linksys zyxel bananapi
 
 builders: linksys-builder bananapi-builder zyxel-builder netgear-builder buffalo-builder 
 
