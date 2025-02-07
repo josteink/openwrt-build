@@ -65,8 +65,8 @@ libpthread
 libubox
 libubus-lua
 libubus
-libuci20130104
-libuclient20201210
+libuci
+libuclient
 libustream-mbedtls
 libmbedtls
 libxtables12
@@ -87,6 +87,7 @@ luci-mod-status
 luci-mod-system
 luci-proto-ipv6
 luci-proto-ppp
+luci-ssl
 luci-theme-bootstrap
 mtd
 nano
