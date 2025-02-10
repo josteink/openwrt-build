@@ -204,7 +204,6 @@ procd-seccomp
 procd-ujail
 prometheus-node-exporter-lua
 prometheus-node-exporter-lua-hwmon
-prometheus-node-exporter-lua-nat_traffic
 prometheus-node-exporter-lua-netstat
 prometheus-node-exporter-lua-openwrt
 px5g-mbedtls
