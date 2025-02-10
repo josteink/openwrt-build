@@ -184,6 +184,7 @@ luci-app-package-manager
 luci-app-upnp
 luci-base
 luci-lib-chartjs
+luci-lib-nixio
 luci-lib-uqr
 luci-light
 luci-mod-admin-full
@@ -217,6 +218,7 @@ procd
 procd-seccomp
 procd-ujail
 prometheus-node-exporter-lua
+prometheus-node-exporter-lua-hwmon
 prometheus-node-exporter-lua-nat_traffic
 prometheus-node-exporter-lua-netstat
 prometheus-node-exporter-lua-openwrt
