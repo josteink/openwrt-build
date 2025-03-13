@@ -11,7 +11,7 @@ dnsmasq
 dropbear
 e2fsprogs
 eip197-mini-firmware
-ethtool-full
+ethtool
 f2fsck
 firewall4
 fitblk
@@ -25,7 +25,6 @@ i2c-tools
 i2csfp
 ip-tiny
 iperf
-iperf3
 iw-full
 iwinfo
 jansson
@@ -95,12 +94,11 @@ kmod-nft-fib
 kmod-nft-nat
 kmod-nft-offload
 kmod-nls-base
+kmod-phy-aquantia
 kmod-phylink
 kmod-ppp
 kmod-pppoe
 kmod-pppox
-kmod-pps
-kmod-ptp
 kmod-regmap-core
 kmod-regmap-i2c
 kmod-rtc-pcf8563
@@ -111,11 +109,7 @@ kmod-udptunnel4
 kmod-udptunnel6
 kmod-usb-core
 kmod-usb-net
-kmod-usb-net-cdc-ether
-kmod-usb-net-cdc-mbim
-kmod-usb-net-cdc-ncm
 kmod-usb-net-ipheth
-kmod-usb-wdm
 kmod-usb-xhci-hcd
 kmod-usb-xhci-mtk
 kmod-usb3
@@ -140,7 +134,6 @@ libgnutls
 libi2c
 libimobiledevice
 libimobiledevice-glue
-libiperf3
 libiwinfo-data
 libiwinfo
 libjson-c
@@ -162,10 +155,8 @@ libpci
 libplist
 libpthread
 librt
-libsensors
 libss
 libstdcpp
-libsysfs
 libubox
 libubus-lua
 libubus
@@ -180,7 +171,6 @@ libustream-mbedtls
 libuuid
 libxml2
 lldpd
-lm-sensors
 logd
 lua
 luasocket
@@ -202,7 +192,6 @@ luci-mod-network
 luci-mod-status
 luci-mod-system
 luci-proto-ipv6
-luci-proto-mbim
 luci-proto-ppp
 luci-proto-wireguard
 luci-ssl
@@ -223,7 +212,6 @@ openwrt-keyring
 opkg
 pciids
 pciutils
-picocom
 ppp
 ppp-mod-pppoe
 procd
@@ -244,7 +232,6 @@ rpcd-mod-rpcsys
 rpcd-mod-rrdns
 rpcd-mod-ucode
 screen
-sysfsutils
 terminfo
 tmux
 ubi-utils
@@ -266,7 +253,6 @@ ucode-mod-uloop
 uhttpd
 uhttpd-mod-lua
 uhttpd-mod-ubus
-umbim
 umdns
 urandom-seed
 urngd
@@ -278,5 +264,4 @@ wifi-scripts
 wireguard-tools
 wireless-regdb
 wpad-basic-mbedtls
-wwan
 zlib
