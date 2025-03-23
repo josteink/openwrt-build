@@ -7,11 +7,6 @@ default: all
 clean:
 	rm -rf images builders dl
 
-linksys: linksys-builder
-	scripts/make-image $(RELEASEDASH)mvebu-cortexa9 linksys linksys_wrt1900acs -wireguard
-
-linksys-builder: builders/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64/bootstrap
-
 bananapi: bananapi-builder
 	scripts/make-image $(RELEASEDASH)mediatek-filogic bananapi bananapi_bpi-r4
 
@@ -27,9 +22,9 @@ buffalo: buffalo-builder
 
 buffalo-builder: builders/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64/bootstrap
 
-all: linksys zyxel bananapi
+all: zyxel bananapi
 
-builders: linksys-builder bananapi-builder zyxel-builder buffalo-builder
+builders: bananapi-builder zyxel-builder buffalo-builder
 
 # ath79
 
@@ -41,17 +36,6 @@ builders/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64/bootstrap
 dl/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64.tar.zst:
 	mkdir -p dl
 	wget -O $@ https://downloads.openwrt.org/$(RELEASEFOLDER)/targets/ath79/generic/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux-x86_64.tar.zst
-
-# linksys - mvebu
-
-builders/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64/bootstrap: dl/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64.tar.zst
-	mkdir -p builders
-	tar x -C builders -vf $?
-	touch $@
-
-dl/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64.tar.zst:
-	mkdir -p dl
-	wget -O $@ https://downloads.openwrt.org/$(RELEASEFOLDER)/targets/mvebu/cortexa9/openwrt-imagebuilder-$(RELEASEDASH)mvebu-cortexa9.Linux-x86_64.tar.zst
 
 # zyxel NWA50AX
 
