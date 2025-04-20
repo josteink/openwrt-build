@@ -11,7 +11,7 @@ dnsmasq
 dropbear
 e2fsprogs
 eip197-mini-firmware
-ethtool
+ethtool-full
 f2fsck
 firewall4
 fitblk
@@ -24,7 +24,7 @@ htop
 i2c-tools
 i2csfp
 ip-tiny
-iperf
+iperf3
 iw-full
 iwinfo
 jansson
