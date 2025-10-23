@@ -1,4 +1,8 @@
+adguardhome
 attendedsysupgrade-common
+avahi-daemon-service-http
+avahi-daemon-service-ssh
+avahi-nodbus-daemon
 base-files
 busybox
 ca-bundle
@@ -115,6 +119,7 @@ kmod-usb-xhci-mtk
 kmod-usb3
 kmod-wireguard
 libatomic
+libavahi-nodbus-support
 libblkid
 libblobmsg-json
 libc
@@ -122,10 +127,12 @@ libcap
 libcap-ng
 libcomerr
 libcurl
+libdaemon
 libe2p
 libevdev
 libevent2
 libevent2-core
+libexpat
 libext2fs
 libf2fs
 libgcc
@@ -134,6 +141,7 @@ libgnutls
 libi2c
 libimobiledevice
 libimobiledevice-glue
+libiperf3
 libiwinfo-data
 libiwinfo
 libjson-c
@@ -151,6 +159,7 @@ libnftnl
 libnghttp2
 libnl-tiny
 libopenssl
+libpcap
 libpci
 libplist
 libpthread
@@ -231,6 +240,7 @@ rpcd-mod-rpcsys
 rpcd-mod-rrdns
 rpcd-mod-ucode
 screen
+tcpdump
 terminfo
 tmux
 ubi-utils
