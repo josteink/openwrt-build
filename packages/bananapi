@@ -4,6 +4,7 @@ avahi-daemon-service-http
 avahi-daemon-service-ssh
 avahi-nodbus-daemon
 base-files
+apk
 busybox
 ca-bundle
 cgi-io
@@ -218,7 +219,6 @@ odhcp6c
 odhcpd-ipv6only
 openssh-sftp-server
 openwrt-keyring
-opkg
 pciids
 pciutils
 ppp

@@ -1,4 +1,5 @@
 base-files
+apk
 busybox
 ca-bundle
 cgi-io
@@ -134,7 +135,6 @@ nftables-json
 odhcp6c
 odhcpd-ipv6only
 openwrt-keyring
-opkg
 ppp
 ppp-mod-pppoe
 procd
