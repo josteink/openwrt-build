@@ -166,7 +166,7 @@ libplist
 libpthread
 librt
 libss
-libstdcpp
+libstdcpp6
 libubox
 libubus-lua
 libubus

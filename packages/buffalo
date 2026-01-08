@@ -41,8 +41,8 @@ kmod-usb2
 libblobmsg-json
 libc
 libgcc
-libip4tc
-libip6tc
+libip4tc2
+libip6tc2
 libiwinfo
 libiwinfo-lua
 libjson-c
@@ -58,7 +58,7 @@ libubus
 libubus-lua
 libuci
 libuclient
-libxtables
+libxtables12
 logd
 lua
 luasocket
