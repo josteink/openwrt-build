@@ -39,26 +39,7 @@ jobs:
         with:
           name: openwrt-images
           path: ./images/
-      
-      # For unstable releases (master branch pushes)
-      - uses: dev-drprasad/delete-tag-and-release@v0.2.1
-        if: startsWith(github.ref, 'refs/heads/')
-        with:
-         delete_release: true
-         tag_name: unstable
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: marvinpinto/action-automatic-releases@latest
-        if: startsWith(github.ref, 'refs/heads/')
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: unstable
-          title: openwrt ${{ env.VERSION }}
-          prerelease: true
-          files: |
-            images/sha*
-            images/*squashfs*
-      
+
       # For stable releases (tag pushes)
       - uses: marvinpinto/action-automatic-releases@latest
         if: startsWith(github.ref, 'refs/tags/')
@@ -70,4 +51,3 @@ jobs:
           files: |
             images/sha*
             images/*squashfs*
-            
