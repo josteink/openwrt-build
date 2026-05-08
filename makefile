@@ -20,7 +20,7 @@ buffalo-builder: builders/openwrt-imagebuilder-$(RELEASEDASH)ath79-generic.Linux
 zyxel-ex5601-t0: bananapi-builder
 	scripts/make-image $(RELEASEDASH)mediatek-filogic zyxel-ex5601-t0 zyxel_ex5601-t0-ubootmod
 
-all: bananapi
+all: bananapi zyxel-ex5601-t0
 
 builders: bananapi-builder buffalo-builder
 
