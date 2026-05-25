@@ -63,6 +63,7 @@ logd
 lua
 luasocket
 luci
+luci-app-attendedsysupgrade
 luci-app-firewall
 luci-base
 luci-lib-ip
