@@ -90,9 +90,9 @@ rpcd-mod-file
 rpcd-mod-iwinfo
 rpcd-mod-luci
 rpcd-mod-rrdns
-screen
 swconfig
 terminfo
+tmux
 uboot-envtools
 ubox
 ubus

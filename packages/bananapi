@@ -239,7 +239,6 @@ rpcd-mod-luci
 rpcd-mod-rpcsys
 rpcd-mod-rrdns
 rpcd-mod-ucode
-screen
 tcpdump
 terminfo
 tmux
