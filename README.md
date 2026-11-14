@@ -22,6 +22,36 @@ To bootstrap and build the images use:
 make
 ````
 
+## flashing
+
+Flash a device over ssh (this does not build; run `make` first):
+
+````sh
+make
+make flash-bananapi
+make flash-zyxel-ex5601-t0
+make flash-buffalo
+````
+
+The device is addressed by an ssh alias from `~/.ssh/config` (`bananapi`,
+`zyxel`, `buffalo`; override with `BANANAPI_HOST=`, etc.); ssh must be
+pre-authorized with keys and an active ssh-agent. The script picks the newest
+sysupgrade image, verifies its checksum when available, copies it to the
+device and runs `sysupgrade`. Device config is kept; wipe it with:
+
+````sh
+make flash-bananapi FLASH_ARGS=-n
+````
+
+Flash picks the newest image for the device name, regardless of release. To
+keep the buffalo dev box on snapshot, build it explicitly (plain `make` still
+builds it at the pinned release):
+
+````sh
+make RELEASE=snapshot RELEASEDASH= RELEASEFOLDER=snapshots buffalo
+make flash-buffalo
+````
+
 ## upgrading
 
 Edit `makefile` and update the `RELEASE` variable to match latest

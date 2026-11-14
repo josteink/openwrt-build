@@ -1,0 +1,91 @@
+#!/bin/bash
+# Flash the newest sysupgrade image for a device over SSH.
+#
+# Usage: flash-image <name> <ssh-target> [sysupgrade args...]
+#
+# <name>       matches packages/<name> and EXTRA_IMAGE_NAME, e.g. bananapi
+# <ssh-target> an ~/.ssh/config alias (e.g. bananapi), or user@host
+# extra args   passed to sysupgrade on the device (e.g. -n wipes the config)
+#
+# The device must be reachable over ssh with pre-authorized keys and a
+# running ssh-agent. The image is copied to /tmp and flashed with sysupgrade;
+# the device reboots, so a dropped ssh connection (exit 255) is expected.
+
+set -euo pipefail
+
+ROOT="$(dirname "$(readlink -f "$0")")/.."
+
+if [ $# -lt 2 ]; then
+	echo "usage: $0 <name> <ssh-target> [sysupgrade args...]" >&2
+	exit 2
+fi
+
+NAME=$1
+HOST=$2
+shift 2
+SYS_ARGS=("$@")
+
+if [ ! -d "$ROOT/images" ]; then
+	echo "error: $ROOT/images does not exist, build an image first: make $NAME" >&2
+	exit 1
+fi
+
+IMAGE=$(find "$ROOT/images" -maxdepth 1 -type f \
+		-name "openwrt-*--${NAME}--*sysupgrade*" \
+		! -name '*.sha256' ! -name '*.json' \
+		-printf '%T@ %p\n' |
+	sort -nr | head -n1 | cut -d' ' -f2-)
+
+if [ -z "$IMAGE" ]; then
+	echo "error: no sysupgrade image for '$NAME' in $ROOT/images" >&2
+	echo "       build one first: make $NAME" >&2
+	exit 1
+fi
+
+BASE=$(basename "$IMAGE")
+REMOTE="/tmp/$BASE"
+
+echo "Checking $HOST"
+if ! ssh -o BatchMode=yes -o ConnectTimeout=10 "$HOST" 'test -x /sbin/sysupgrade'; then
+	echo "error: cannot ssh to '$HOST', or it is not a running OpenWrt system" >&2
+	echo "       (ssh keys must be authorized and ssh-agent running)" >&2
+	exit 1
+fi
+
+if [ -f "$ROOT/images/sha256sums" ] &&
+	grep -qF "*$BASE" "$ROOT/images/sha256sums"; then
+	(cd "$ROOT/images" && grep -F "*$BASE" sha256sums | sha256sum -c -)
+else
+	echo "note: no $BASE entry in images/sha256sums, skipping verification"
+fi
+
+echo "Uploading $BASE ($(du -h "$IMAGE" | cut -f1)) to $HOST:$REMOTE"
+scp -O -q -o BatchMode=yes "$IMAGE" "$HOST:$REMOTE"
+
+CMD=sysupgrade
+for arg in "${SYS_ARGS[@]+"${SYS_ARGS[@]}"}"; do
+	CMD+=" $(printf '%q' "$arg")"
+done
+CMD+=" $(printf '%q' "$REMOTE")"
+
+echo
+echo "Flashing $NAME on $HOST"
+echo "  image: $BASE"
+echo "  cmd:   $CMD"
+echo
+
+set +e
+ssh -o BatchMode=yes "$HOST" "$CMD"
+RC=$?
+set -e
+
+if [ "$RC" -eq 0 ] || [ "$RC" -eq 255 ]; then
+	echo
+	echo "sysupgrade started (ssh exit $RC; 255 is normal when the device reboots)."
+	echo "The device should come back on $HOST shortly."
+	exit 0
+fi
+
+echo "error: sysupgrade failed (exit $RC)" >&2
+ssh -o BatchMode=yes "$HOST" "rm -f $(printf '%q' "$REMOTE")" || true
+exit "$RC"
